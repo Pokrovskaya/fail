@@ -31,8 +31,15 @@ client.on('message', msg => {
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
     msg.reply('Shut up!');
   }
+  
   if (msg.content === '/treasury' && msg.channel.topic === 'Treasury of Otradnoye') {
-    msg.reply('Treasury contains: ' + Shvillings.toString() + ' shvillings and ' + Kershes.toString() + ' Kershes');
+    msg.reply('Treasury contains: ' + Shvillings.toString() + ' shvillings and ' + Kershes.toString() + ' kershes');
+  }
+  
+  if (msg.content === '/nalogytest' && msg.channel.topic === 'Treasury of Otradnoye') {
+    msg.reply('Treasury shvillings');
+    Shvillings += 25000;
+    Kershes += 5;
   }
   
   
