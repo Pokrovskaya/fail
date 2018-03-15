@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var disgust = 1;
+var Kershes = 55;
+var Shvillings = 900000;
 
 client.on('ready', () => {
   console.log(`Logged in as ${423868710940311552}!`);
@@ -30,6 +31,11 @@ client.on('message', msg => {
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
     msg.reply('Shut up!');
   }
+  if (msg.content === '/treasury' && msg.channel.topic === 'Treasury of Otradnoye') {
+    msg.reply('Treasury contains: ' + Shvillings.toString() + ' shvillings and ' + Kershes.toString() + ' Kershes');
+  }
+  
+  
   
 });
 
