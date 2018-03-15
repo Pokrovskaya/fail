@@ -20,7 +20,7 @@ client.on('message', msg => {
   }
 
   if (msg.content === 'What is the battle system?') {
-    msg.reply('Battle System - machanics of Otradnoe that will be added much later'
+    msg.reply('Battle System - machanics of Otradnoe that will be added much later');
 
   if (msg.content === 'What is the otradnoye-bot?') {
     msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
