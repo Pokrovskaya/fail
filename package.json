@@ -1,0 +1,14 @@
+{
+  "name": "otradnoye-bot",
+  "version": "1.0.0",
+  "description": "My own Discord bot",
+  "main": "bot.js",
+  "author": "YOUR-NAME-HERE",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "discord.js": "^11.3.2",
+    "gi": "^1.0.0",
+    "git": "^0.1.5",
+    "winston": "^2.4.1"
+  }
+}
