@@ -4,6 +4,9 @@
   "description": "My own Discord bot",
   "main": "bot.js",
   "author": "YOUR-NAME-HERE",
+  "scripts": {
+    "start" : "node bot.js"
+  }
   "dependencies": {
     "discord.io": "github:woor/discord.io#gateway_v6",
     "discord.js": "^11.3.2",
