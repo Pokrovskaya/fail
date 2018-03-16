@@ -46,7 +46,8 @@ client.on('message', msg => {
     let role = message.guild.roles.find("name", "_Kupotsu");
 
     msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
-    msg.autor.
+    msg.autor.addRole(role).catch(console.error);
+
   }
   
 });
