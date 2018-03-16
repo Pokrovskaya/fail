@@ -45,7 +45,9 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
-    var myRole = msg.server.roles.get("424064220213018625");
+    for(var i in  msg.server.roles) {
+      
+    }
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     msg.autor.addRole(myRole).catch(console.error);
