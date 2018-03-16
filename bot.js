@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var Kershes = 55;
 var Shvillings = 900000;
-let myRole = message.guild.roles.get("424064220213018625");
 
 
 
@@ -46,7 +45,7 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
-    let myRole = message.guild.roles.get("424064220213018625");
+    let myRole = msg.guild.roles.get("424064220213018625");
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     //msg.autor.addRole(role).catch(console.error);
