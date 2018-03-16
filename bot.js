@@ -45,12 +45,18 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
-    for(var i in  msg.server.roles) {
-      
+    var success = false;
+    for(var i = 0; i < msg.server.roles.length; i++) {
+      if(msg.server.roles.id == '424064220213018625'){
+        let myRole = msg.server.roles[i];
+        success = true;
+        break;
+      }
     }
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
-    msg.autor.addRole(myRole).catch(console.error);
+    if(success) msg.autor.addRole(myRole).catch(console.error);
+    else msg.reply('нихуя не знаю');
   }
   
 });
