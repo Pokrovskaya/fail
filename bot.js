@@ -56,7 +56,7 @@ client.on('message', msg => {
       }
     }*/
 
-    msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
+    msg.send('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     if(success) msg.autor.addRole(myRole).catch(console.error);
     else msg.reply('нихуя не знаю');
   }
