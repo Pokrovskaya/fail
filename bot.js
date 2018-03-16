@@ -45,10 +45,10 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
-    var success = false;
+    //var success = false;
     msg.reply(msg.guild.roles.length.toString());
     for(var i = 0; i < msg.guild.roles.length; i++) {
-      msg.reply(msg.guild.roles[i].name);
+      //msg.reply(msg.guild.roles[i].name);
       if(msg.server.roles[i].name === 'Купцовский!'){
         let myRole = msg.guild.roles[i];
         success = true;
