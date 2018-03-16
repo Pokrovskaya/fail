@@ -43,7 +43,7 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
-    let myRole = message.guild.roles.get("264410914592129025");
+    let myRole = message.guild.roles.get("424064220213018625");
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     //msg.autor.addRole(role).catch(console.error);
