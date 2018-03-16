@@ -42,7 +42,12 @@ client.on('message', msg => {
     Kershes += 5;
   }
   
-  
+  if (msg.content === 'You do not live in the world in which you think') {
+    let role = message.guild.roles.find("name", "_Kupotsu");
+
+    msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
+    msg.autor.
+  }
   
 });
 
