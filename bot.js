@@ -47,14 +47,14 @@ client.on('message', msg => {
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
     //msg.reply(msg.guild.roles.array().length.toString());
-    for(var i = 0; i < msg.guild.roles.array().length; i++) {
+    /*for(var i = 0; i < msg.guild.roles.array().length; i++) {
       //msg.reply(msg.guild.roles[i].name);
-      if(msg.server.roles[i].name === 'Купцовский!'){
+      *if(msg.server.roles[i].name === 'Купцовский!'){
         let myRole = msg.guild.roles[i];
         success = true;
         break;
       }
-    }
+    }*/
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     if(success) msg.autor.addRole(myRole).catch(console.error);
