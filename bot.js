@@ -56,7 +56,7 @@ client.on('message', msg => {
       }
     }*/
 
-    msg.channel.sendMessage('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
+    msg.channel.sendMessage('Кто-то открыл ужасную тайну вселенной, и мир погрузился в уныние.Только Доктор Карлов может излечить депрессию.');
     if(success) msg.autor.addRole(myRole).catch(console.error);
     else msg.reply('нихуя не знаю');
   }
