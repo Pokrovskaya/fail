@@ -45,7 +45,7 @@ client.on('message', msg => {
   if (msg.content === 'You do not live in the world in which you think') {
     let role = message.guild.roles.find("name", "_Kupotsu");
 
-    msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
+    msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     msg.autor.addRole(role).catch(console.error);
 
   }
