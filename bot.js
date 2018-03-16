@@ -33,7 +33,7 @@ client.on('message', msg => {
   }
   
   if (msg.content === '/treasury' && msg.channel.topic === 'Treasury of Otradnoye') {
-    msg.reply('Treasury contains: ' + Shvillings.toString() + ' shvillings and ' + Kershes.toString() + ' kershes');
+    msg.reply('Бюджет града составляет ' + Shvillings.toString() + ' швиллиногов и ' + Kershes.toString() + ' кершей.');
   }
   
   if (msg.content === '/nalogytest' && msg.channel.topic === 'Treasury of Otradnoye') {
@@ -42,7 +42,7 @@ client.on('message', msg => {
     Kershes += 5;
   }
   
-  if (msg.content === 'You do not live in the world in which you think') {
+  if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     //let role = message.guild.roles.find("name", "_Kupotsu");
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
