@@ -29,7 +29,7 @@ client.on('message', msg => {
   }
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
-    msg.reply('Shut up!');
+    msg.reply('ЗАТКНИСЬ МРАЗЬ!');
   }
   
   if (msg.content === '/treasury' && msg.channel.topic === 'Treasury of Otradnoye') {
@@ -37,13 +37,13 @@ client.on('message', msg => {
   }
   
   if (msg.content === '/nalogytest' && msg.channel.topic === 'Treasury of Otradnoye') {
-    msg.reply('Treasury shvillings');
+    msg.reply('Налоги отправленны.');
     Shvillings += 25000;
     Kershes += 5;
   }
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
-    //let role = message.guild.roles.find("name", "_Kupotsu");
+    let role = message.guild.roles.find("name", "_Kupotsu");
 
     msg.reply('НЕКТО ОТКРЫЛ ТАЙНУ МИРОЗДАНИЯ, ВСЕ В ДЕПРЕССИИ');
     //msg.autor.addRole(role).catch(console.error);
