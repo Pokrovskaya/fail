@@ -46,9 +46,9 @@ client.on('message', msg => {
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
-    for(var i = 0; i < msg.server.roles.length; i++) {
+    for(var i = 0; i < msg.guild.roles.length; i++) {
       if(msg.server.roles.id == '424064220213018625'){
-        let myRole = msg.server.roles[i];
+        let myRole = msg.guild.roles[i];
         success = true;
         break;
       }
