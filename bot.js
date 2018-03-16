@@ -2,6 +2,9 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var Kershes = 55;
 var Shvillings = 900000;
+let myRole = message.guild.roles.get("424064220213018625");
+
+
 
 client.on('ready', () => {
   console.log(`Logged in as ${423868710940311552}!`);
