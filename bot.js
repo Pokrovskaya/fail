@@ -7,6 +7,7 @@ var Shvillings = 900000;
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
+  client.setGame('Minecraft');
 });
 
 client.on('message', msg => {
@@ -18,6 +19,19 @@ client.on('message', msg => {
     msg.channel.sendMessage('Вахтанг - дебил!');
   }
   
+  if (msg.content.search(/тебя здесь не уважают/i) != -1 && msg.author.username == "ubugged-otradnoe") {
+    let chance = Math.random()*10;
+    chance = Math.floor(chance);
+    if(chance == 0) }
+      let jar = Math.random()*10/3;
+      jar = Math.floor(jar);
+      if(jar == 0) msg.reply('Харе флудить!');
+      else if (jar == 1) msg.reply('Мы поняли, заткнись!')
+      else if (jar == 2) msg.reply('Ты совсем глупый или только чуть-чуть?');
+      else msg.reply('Меня гриферят а тут еще ты со своими уведомлениями!');
+    }
+  }
+  
   if (msg.content ==='Правда, Морж?') {
     msg.reply('ага!');
   }
@@ -27,7 +41,7 @@ client.on('message', msg => {
   }
   
   if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
-    msg.channel.sendMessage('чё');
+    if(msg.channel.sendMessage('чё');
   }
   
   
