@@ -34,6 +34,10 @@ client.on('message', msg => {
     msg.react('👍');
   }
   
+  if (msg.content === 'Вахтанг дебил') {
+    msg.delete(5);
+  }
+  
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
     msg.reply('ЗАТКНИСЬ МРАЗЬ!');
   }
