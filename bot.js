@@ -22,7 +22,7 @@ client.on('message', msg => {
   if (msg.content.search(/тебя здесь не уважают/i) != -1 && msg.author.username == "ubugged-otradnoe") {
     let chance = Math.random()*10;
     chance = Math.floor(chance);
-    if(chance == 0) }
+    if(chance == 0) {
       let jar = Math.random()*10/3;
       jar = Math.floor(jar);
       if(jar == 0) msg.reply('Харе флудить!');
