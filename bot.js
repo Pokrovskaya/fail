@@ -26,7 +26,7 @@ client.on('message', msg => {
       let jar = Math.random()*10/3;
       jar = Math.floor(jar);
       if(jar == 0) msg.reply('Харе флудить!');
-      else if (jar == 1) msg.reply('Мы поняли, заткнись!')
+      else if (jar == 1) msg.reply('Мы поняли, заткнись!');
       else if (jar == 2) msg.reply('Ты совсем глупый или только чуть-чуть?');
       else msg.reply('Меня гриферят а тут еще ты со своими уведомлениями!');
     }
