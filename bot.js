@@ -26,6 +26,11 @@ client.on('message', msg => {
     msg.reply('ну блин она же суицыд пропагандировала все равно из школы бы выгнали ставился же вопрос об отчислении вот и убил чтобы не мучалась');
   }
   
+  if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
+    msg.reply('чё');
+  }
+  
+  
   if (msg.content ==='Скинь фоту Вахтанга') {
     msg.reply('Без б!');
     msg.channel.sendFile('https://cdn1.rzn.info/data/image/newsadd/base/2018/02/171025_5a8564f601d4f.jpg');
