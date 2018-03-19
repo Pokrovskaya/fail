@@ -38,7 +38,7 @@ client.on('message', msg => {
     msg.reply("Тебя здесь не уважают");
   }
   
- msg.reply(msg.author.username);
+ //msg.reply(msg.author.username);
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     msg.delete(5);
