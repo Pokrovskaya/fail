@@ -30,6 +30,15 @@ client.on('message', msg => {
     msg.reply('Damned Otradnoye-bot is the fokkin piece of shut thats fokkin never worked right! Dumnit!');
   }
   
+ if (msg.content === 'Вахтанг извини') {
+    msg.reply('Ну лана лана');
+    msg.author.unblock();
+  } 
+  
+  if (msg.content === 'Вахтанг') {
+    msg.reply('Слушаю');
+  } 
+  
   if (msg.content === 'Вахтанг рулит') {
     msg.react('👍');
   }
