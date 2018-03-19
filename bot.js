@@ -15,7 +15,7 @@ client.on('message', msg => {
   }
 
   if (msg.content ==='Кто такой Вахтанг?') {
-    msg.reply('Вахтанг - дебил!');
+    msg.channel.sendMessage('Вахтанг - дебил!');
   }
   
   if (msg.content ==='Правда, Морж?') {
