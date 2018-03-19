@@ -34,6 +34,10 @@ client.on('message', msg => {
     msg.react('👍');
   }
   
+  if (msg.author.username === "Покровская") {
+    msg.reply("Тебя здесь не уважают");
+  }
+  
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     msg.delete(5);
   }
@@ -54,6 +58,8 @@ client.on('message', msg => {
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
+    msg.author.username = "Купоцый";
+    
     //msg.reply(msg.guild.roles.array().length.toString());
     /*for(var i = 0; i < msg.guild.roles.array().length; i++) {
       //msg.reply(msg.guild.roles[i].name);
