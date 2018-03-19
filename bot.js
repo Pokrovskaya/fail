@@ -34,9 +34,11 @@ client.on('message', msg => {
     msg.react('👍');
   }
   
-  if (msg.author.username === "Покровская") {
+  if (msg.author.username === 'Покровская') {
     msg.reply("Тебя здесь не уважают");
   }
+  
+ msg.reply(msg.author.username);
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     msg.delete(5);
