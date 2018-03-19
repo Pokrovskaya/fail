@@ -34,7 +34,7 @@ client.on('message', msg => {
     msg.react('👍');
   }
   
-  if (msg.author.username === 'Покровская') {
+  if (msg.member.nickname === 'Покровская') {
     msg.reply("Тебя здесь не уважают");
   }
   
@@ -60,7 +60,7 @@ client.on('message', msg => {
   
   if (msg.content === 'Вы живете не в том мире в котором вы думаете') {
     var success = false;
-    msg.author.username = "Купоцый";
+    msg.member.nickname = "Купоцый";
     
     //msg.reply(msg.guild.roles.array().length.toString());
     /*for(var i = 0; i < msg.guild.roles.array().length; i++) {
