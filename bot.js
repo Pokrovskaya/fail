@@ -33,11 +33,11 @@ client.on('message', msg => {
   }
   
   if (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) {
-      let jar = Math.random()*4;
-      jar = Math.floor(jar);
-      if(jar == 0) msg.reply('дарова');
-      else if (jar == 1) msg.reply('дратути');
-      else if (jar == 2) msg.reply('О, приует!');
+      let jar1 = Math.random()*4;
+      jar1 = Math.floor(jar);
+      if(jar1 == 0) msg.reply('дарова');
+      else if (jar1 == 1) msg.reply('дратути');
+      else if (jar1 == 2) msg.reply('О, приует!');
       else msg.reply('А вот и ты!');
   }
   
