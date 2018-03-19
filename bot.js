@@ -27,7 +27,7 @@ client.on('message', msg => {
   }
   
   if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
-    msg.reply('чё');
+    msg.channel.sendMessage('чё');
   }
   
   
