@@ -32,6 +32,16 @@ client.on('message', msg => {
     }
   }
   
+  if (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1)) {
+      let jar = Math.random()*4;
+      jar = Math.floor(jar);
+      if(jar == 0) msg.reply('дарова');
+      else if (jar == 1) msg.reply('дратути');
+      else if (jar == 2) msg.reply('О, приует!');
+      else msg.reply('А вот и ты!');
+    }
+  }
+  
   if (msg.content ==='Правда, Морж?') {
     msg.reply('ага!');
   }
