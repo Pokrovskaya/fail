@@ -17,6 +17,10 @@ client.on('message', msg => {
   if (msg.content ==='Кто такой Вахтанг?') {
     msg.reply('Вахтанг - дебил!');
   }
+  
+  if (msg.content ==='Правда, Морж?') {
+    msg.reply('ага!');
+  }
 });
 
 client.login(process.env.BOT_TOKEN); // wow
