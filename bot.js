@@ -39,10 +39,9 @@ client.on('message', msg => {
       else if (jar == 1) msg.reply('дратути');
       else if (jar == 2) msg.reply('О, приует!');
       else msg.reply('А вот и ты!');
-    }
   }
   
-  if (msg.content ==='Правда, Морж?') {
+  if (msg.content.search((/правда морж/i) != -1 || msg.content.search(/правда, морж/i) != -1) && msg.content.search(/?/i) != -1){
     msg.reply('ага!');
   }
   
