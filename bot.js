@@ -6,7 +6,7 @@ var Shvillings = 900000;
 
 
 client.on('ready', () => {
-  console.log(`Logged in as ${423868710940311552}!`);
+  //console.log(`Logged in as ${423868710940311552}!`);
 });
 
 client.on('message', msg => {
