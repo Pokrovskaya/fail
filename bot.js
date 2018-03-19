@@ -10,7 +10,7 @@ client.on('ready', () => {
   client.user.setPresence({ game: { name: 'Minecraft' }, status: 'idle' });
 });
 
-client.on('message', msg => {
+client.on('message', msg => { 
   if (msg.content === 'ping') {
     msg.reply('Хватит по китайски говорить!');
   }
@@ -59,10 +59,10 @@ client.on('message', msg => {
     msg.channel.sendFile('https://cdn1.rzn.info/data/image/newsadd/base/2018/02/171025_5a8564f601d4f.jpg');
   }
   
-  if (msg.content ==='Морж') {
+  /*if (msg.content ==='Морж') {
     msg.reply('????');
     //msg.channel.sendFile('https://cdn1.rzn.info/data/image/newsadd/base/2018/02/171025_5a8564f601d4f.jpg');
-  }
+  }*/
 });
 
 client.login(process.env.BOT_TOKEN); // wow
