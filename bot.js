@@ -42,9 +42,9 @@ client.on('message', msg => {
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     msg.delete(5);
-    msg.reply("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!");
+    msg.author.send("Я ТИБЯ КАК ПСИНУ ПРИХЛОПНУ!");
     msg.member.ban(1);
-    msg.user.block();
+    msg.author.block();
   }
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
