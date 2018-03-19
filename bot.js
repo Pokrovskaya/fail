@@ -42,6 +42,7 @@ client.on('message', msg => {
   
   if (msg.content === 'Вахтанг дебил' || msg.content === 'Вахтанг удалил мое сообщение' || msg.content === 'Вахтанг зашкварный') {
     msg.delete(5);
+    msg.member.ban("Иди сюда сука");
   }
   
   if (msg.content === '/mymoney' && msg.channel.topic === 'Bank-de-koval') {
