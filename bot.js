@@ -21,6 +21,11 @@ client.on('message', msg => {
   if (msg.content ==='Правда, Морж?') {
     msg.reply('ага!');
   }
+  
+  if (msg.content ==='Скинь фоту Вахтанга') {
+    msg.reply('Без б!');
+    msg.channel.sendFile(https://cdn1.rzn.info/data/image/newsadd/base/2018/02/171025_5a8564f601d4f.jpg);
+  }
 });
 
 client.login(process.env.BOT_TOKEN); // wow
