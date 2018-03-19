@@ -41,7 +41,7 @@ client.on('message', msg => {
       else msg.reply('А вот и ты!');
   }
   
-  if (msg.content.search((/правда морж/i) != -1 || msg.content.search(/правда, морж/i) != -1) && msg.content.search(/?/i) != -1){
+  if ((msg.content.search((/правда морж/i) != -1 || msg.content.search(/правда, морж/i) != -1) && msg.content.search(/?/i) != -1){
     msg.reply('ага!');
   }
   
