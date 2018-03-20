@@ -50,7 +50,12 @@ client.on('message', msg => {
   }
   
   if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
-    msg.channel.sendMessage('чё');
+    let jar1 = Math.random()*4;
+    jar1 = Math.floor(jar1);
+    if(jar1 == 0) msg.reply('чё');
+    else if (jar1 == 1) msg.reply('wut');
+    else if (jar1 == 2) msg.reply('ок');
+    else msg.reply('поздравляю');
   }
   
   
