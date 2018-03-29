@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var Kershes = 55;
 var Shvillings = 900000;
-
+var Dobrota = 0;
 
 
 client.on('ready', () => {
@@ -11,6 +11,10 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => { 
+  if (msg.content === 'ping') {
+    msg.reply('Хватит по китайски говорить!');
+  }
+  
   if (msg.content === 'ping') {
     msg.reply('Хватит по китайски говорить!');
   }
@@ -32,7 +36,7 @@ client.on('message', msg => {
     }
   }
   
-  if (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) {
+  if (Dobrota >= 0 && (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1)) {
       let jar1 = Math.random()*4;
       jar1 = Math.floor(jar1);
       if(jar1 == 0) msg.reply('дарова');
@@ -46,7 +50,8 @@ client.on('message', msg => {
   }
   
   if (msg.content ==='Кто убил Диану Серову?') {
-    msg.reply('ну блин она же суицыд пропагандировала все равно из школы бы выгнали ставился же вопрос об отчислении вот и убил чтобы не мучалась');
+    if(Dobrota > 10) msg.reply('ну блин она же суицыд пропагандировала все равно из школы бы выгнали ставился же вопрос об отчислении вот и убил чтобы не мучалась');
+    if(Dobrota <= 10) msg.channel.send('хз');
   }
   
   if (msg.content ==='Был у нас, дружище Мирко!' && msg.author.username == "Банкирский") {
@@ -66,6 +71,7 @@ client.on('message', msg => {
   
   if (msg.content.search(/морж/i) != -1 && (msg.content.search(/дебил/i) != -1 || msg.content.search(/даун/i) != -1 || msg.content.search(/придурок/i) != -1)) {
     msg.reply('Да пошел ты');
+    Dobrota -= 2;
   }
   
   /*if (msg.content ==='Морж') {
