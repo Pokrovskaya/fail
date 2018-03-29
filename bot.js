@@ -14,6 +14,10 @@ client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Хватит по китайски говорить!');
   }
+  
+  if (msg.content.search(/морж/i) != -1 && msg.content.search(/лайкни/i)) {
+    msg.react('👍');
+  }
 
   if (msg.content ==='Кто такой Вахтанг?') {
     msg.channel.sendMessage('Вахтанг - дебил!');
