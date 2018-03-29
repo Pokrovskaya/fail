@@ -7,7 +7,7 @@ var Shvillings = 900000;
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: 'Minecraft v0.1.0.0' }, status: 'idle' });
+  client.user.setPresence({ game: { name: 'Minecraft v0.1.0.1' }, status: 'idle' });
 });
 
 client.on('message', msg => { 
