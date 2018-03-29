@@ -7,7 +7,7 @@ var Shvillings = 900000;
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: 'Minecraft v0.1.0' }, status: 'idle' });
+  client.user.setPresence({ game: { name: 'Minecraft v0.1.0.0' }, status: 'idle' });
 });
 
 client.on('message', msg => { 
@@ -62,6 +62,10 @@ client.on('message', msg => {
   if (msg.content ==='Скинь фоту Вахтанга') {
     msg.reply('Без б!');
     msg.channel.sendFile('https://cdn1.rzn.info/data/image/newsadd/base/2018/02/171025_5a8564f601d4f.jpg');
+  }
+  
+  if (msg.content.search(/морж/i) != -1 && (msg.content.search(/дебил/i) != -1 || msg.content.search(/даун/i) != -1 || msg.content.search(/придурок/i) != -1 ||)) {
+    msg.reply('Да пошел ты');
   }
   
   /*if (msg.content ==='Морж') {
