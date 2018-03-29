@@ -32,7 +32,7 @@ client.on('message', msg => {
     }
   }
   
-  if (Dobrota >= 0) if(msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) || msg.content.search(/здравствуйте/i) != -1) {
+  if(msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) || msg.content.search(/здравствуйте/i) != -1) {
       let jar1 = Math.random()*4;
       jar1 = Math.floor(jar1);
     
@@ -40,7 +40,7 @@ client.on('message', msg => {
           if(jar1 == 0) msg.reply('дарова, даш сотку в пятёрку?');
           else if (jar1 == 1) msg.reply('дратути. Мне сегодня денег не перекинули, дай сотку, я куплю тебе липтон');
           else if (jar1 == 2) msg.reply('О, приует! Тебе за лейс с крабом сгонять?');
-          else msg.reply('А вот и ты! Я не принуждаю, но дай сотку, пж.');
+          else msg.reply('А вот и ты! Я не принуждаю, но дай сотку, пж');
       } else {
           if(jar1 == 0) msg.reply('дарова');
           else if (jar1 == 1) msg.reply('дратути');
