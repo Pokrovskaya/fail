@@ -36,13 +36,21 @@ client.on('message', msg => {
     }
   }
   
-  if (Dobrota >= 0 && (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1)) {
+  if (Dobrota >= 0 && (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) || msg.content.search(/здравствуйте/i) != -1)) {
       let jar1 = Math.random()*4;
       jar1 = Math.floor(jar1);
-      if(jar1 == 0) msg.reply('дарова');
-      else if (jar1 == 1) msg.reply('дратути');
-      else if (jar1 == 2) msg.reply('О, приует!');
-      else msg.reply('А вот и ты!');
+    
+      if(!msg.member.roles.exists('id', '423172914691571722')) {
+          if(jar1 == 0) msg.reply('дарова');
+          else if (jar1 == 1) msg.reply('дратути');
+          else if (jar1 == 2) msg.reply('О, приует!');
+          else msg.reply('А вот и ты!');
+      } else {
+          if(jar1 == 0) msg.reply('дарова, даш сотку в пятёрку?);
+          else if (jar1 == 1) msg.reply('дратути. Мне сегодня денег не перекинули, дай сотку, я куплю тебе липтон');
+          else if (jar1 == 2) msg.reply('О, приует! Тебе за лейс с крабом сгонять?');
+          else msg.reply('А вот и ты! Я не принуждаю, но дай сотку, пж.');
+      }
   }
   
   if (msg.content.search(/правда/i) != -1 && msg.content.search(/морж/i) != -1 && msg.content.search(/\?/) != -1) {
