@@ -32,7 +32,7 @@ client.on('message', msg => {
     }
   }
   
-  if(Dobrota > -1 && msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1 || msg.content.search(/здравствуйте/i) != -1)) {
+  if(Dobrota > -1 && (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1 || msg.content.search(/здравствуйте/i) != -1)) {
       let jar1 = Math.random()*4;
       jar1 = Math.floor(jar1);
     
