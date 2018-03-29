@@ -64,7 +64,7 @@ client.on('message', msg => {
     msg.channel.sendFile('https://cdn1.rzn.info/data/image/newsadd/base/2018/02/171025_5a8564f601d4f.jpg');
   }
   
-  if (msg.content.search(/морж/i) != -1 && (msg.content.search(/дебил/i) != -1 || msg.content.search(/даун/i) != -1 || msg.content.search(/придурок/i) != -1 ||)) {
+  if (msg.content.search(/морж/i) != -1 && (msg.content.search(/дебил/i) != -1 || msg.content.search(/даун/i) != -1 || msg.content.search(/придурок/i) != -1)) {
     msg.reply('Да пошел ты');
   }
   
