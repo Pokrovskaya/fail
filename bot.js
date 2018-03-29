@@ -14,10 +14,6 @@ client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('Хватит по китайски говорить!');
   }
-  
-  if (msg.content === 'ping') {
-    msg.reply('Хватит по китайски говорить!');
-  }
 
   if (msg.content ==='Кто такой Вахтанг?') {
     msg.channel.sendMessage('Вахтанг - дебил!');
@@ -40,7 +36,7 @@ client.on('message', msg => {
       let jar1 = Math.random()*4;
       jar1 = Math.floor(jar1);
     
-      if(!msg.member.roles.exists('id', '423172914691571722')) {
+      if(msg.member.roles.exists('id', '423172914691571722')) {
           if(jar1 == 0) msg.reply('дарова, даш сотку в пятёрку?');
           else if (jar1 == 1) msg.reply('дратути. Мне сегодня денег не перекинули, дай сотку, я куплю тебе липтон');
           else if (jar1 == 2) msg.reply('О, приует! Тебе за лейс с крабом сгонять?');
