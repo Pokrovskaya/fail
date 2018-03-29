@@ -32,7 +32,7 @@ client.on('message', msg => {
     }
   }
   
-  /*if (Dobrota >= 0 && (msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) || msg.content.search(/здравствуйте/i) != -1)) {
+  if (Dobrota >= 0) if(msg.content.search(/привет/i) != -1 || msg.content.search(/здравствуй/i) != -1) || msg.content.search(/здравствуйте/i) != -1) {
       let jar1 = Math.random()*4;
       jar1 = Math.floor(jar1);
     
@@ -47,7 +47,7 @@ client.on('message', msg => {
           else if (jar1 == 2) msg.reply('О, приует!');
           else msg.reply('А вот и ты!');
       }
-  }*/
+  }
   
   if (msg.content.search(/правда/i) != -1 && msg.content.search(/морж/i) != -1 && msg.content.search(/\?/) != -1) {
     msg.reply('ага!');
