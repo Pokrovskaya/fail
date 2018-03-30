@@ -14,7 +14,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => { 
-  let chance = Math.random()*100;
+  let chance = Math.random()*4;
   chance = Math.floor(chance);
   if(chance == 0){
     setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 5000);
