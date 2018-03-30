@@ -21,7 +21,7 @@ client.on('message', msg => {
      let done = contents.toString();
     });
     
-    if(msg.content.search(new RegExp(msg.author.id, "i")) == -1) {
+    if(done.search(new RegExp(msg.author.id, "i")) == -1) {
       fs.appendFile("userDb", "\n\n"+msg.author.id+"\nrank$0\nmoney$100\nprem$10\nexp$0\ninv$0$0$0$0$0\nnum$0$0$0$0$0\nlvl$0$0$0$0$0\nhunger$0\nrating$0");
       msg.reply("Да ты новичёк! Добро пожаловать!");
       
