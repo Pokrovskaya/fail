@@ -21,7 +21,7 @@ client.on('message', msg => {
      let done = contents.toString();
     });
     
-    if(msg.content.search(new RegExp(msg.author.id, "i")) != -1)
+    //if(msg.content.search(new RegExp(msg.author.id, "i")) != -1)
   }
   
   if (msg.content === 'ping') {
