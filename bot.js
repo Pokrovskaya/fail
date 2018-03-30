@@ -10,7 +10,7 @@ var UserRegistred = [];
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: 'Minecraft a0.3.0' }, status: 'dnd' });
+  client.user.setPresence({ game: { name: 'Minecraft 2a0.3.0' }, status: 'dnd' });
 });
 
 client.on('message', msg => { 
@@ -21,7 +21,7 @@ client.on('message', msg => {
      let done = contents.toString();
     });
     
-    if(msg.content.search(new RegExp(msg.author.id, "i")) != -1) {
+    if(msg.content.search(new RegExp(msg.author.id, "i")) == -1) {
       fs.appendFile("userDb", "\n\n"+msg.author.id+"\nrank$0\nmoney$100\nprem$10\nexp$0\ninv$0$0$0$0$0\nnum$0$0$0$0$0\nlvl$0$0$0$0$0\nhunger$0\nrating$0");
       msg.reply("Да ты новичёк! Добро пожаловать!");
       
@@ -32,7 +32,7 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'ping') {
-    msg.reply('окей!');
+    msg.reply('оке');
   }
   
   if (msg.content.search(/морж/i) != -1 && msg.content.search(/лайкни/i) != -1) {
