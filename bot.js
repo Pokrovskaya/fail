@@ -5,6 +5,7 @@ var Kershes = 55;
 var Shvillings = 900000;
 var Dobrota = 0;
 var Sotka = 0;
+var SotkaTimer = 0;
 var UserRegistred = [];
 
 
@@ -14,12 +15,16 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => { 
-  let chance = Math.random()*4;
+  let chance = Math.random()*40;
   chance = Math.floor(chance);
   if(chance == 0){
     setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 5000);
+    Sotka = 1;
+    SotkaTimer = 5;
   }
   
+  if(SotkaTimer > 0) SotkaTimer -= 1;
+  else Sotka = 0;
   
   if(!msg.author.id in UserRegistred) {
     fs.readFile("userDb", function (err, contents) {
@@ -43,6 +48,14 @@ client.on('message', msg => {
   
   if (msg.content.search(/морж/i) != -1 && msg.content.search(/лайкни/i) != -1) {
     msg.react('👍');
+  }
+  
+ if (msg.content.search(/нет/i) != -1 && Sotka == 1) {
+    msg.reply('ну блиииин');
+    SotkaTimer = 0;
+  } else if (msg.content.search(/да/i) != -1 && Sotka == 1) {
+    msg.reply('спс!');
+    SotkaTimer = 0;
   }
 
   if (msg.content ==='Кто такой Вахтанг?') {
