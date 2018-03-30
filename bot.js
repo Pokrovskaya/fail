@@ -10,7 +10,7 @@ var UserRegistred = [];
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: 'Minecraft v0.2.4' }, status: 'dnd' });
+  client.user.setPresence({ game: { name: 'Minecraft v0.2.5' }, status: 'dnd' });
 });
 
 client.on('message', msg => { 
