@@ -6,25 +6,39 @@ var Shvillings = 900000;
 var Dobrota = 0;
 var Sotka = 0;
 var SotkaTimer = 0;
+var Game = 'Minecraft 5a0.3.0';
+var GameTimer = 0;
 var UserRegistred = [];
 
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: 'Minecraft 3a0.3.0' }, status: 'dnd' });
+  client.user.setPresence({ game: { name: Game }, status: 'dnd' });
 });
 
 client.on('message', msg => { 
   let chance = Math.random()*40;
   chance = Math.floor(chance);
   if(chance == 0){
-    setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 5000);
-    Sotka = 1;
-    SotkaTimer = 5;
+    let jar = Math.random()*2;
+      jar = Math.floor(jar);
+      if(jar == 0) { setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 5000);
+                     Sotka = 1;
+                     SotkaTimer = 5;}
+    
+      if(jar == 1) { setTimeout(() => {msg.channel.send("Блин, меня просто так на серваке забанили. За что?") ;}, 5000);
+                     client.user.setPresence({ game: { name: 'Chrome' }, status: 'idle' });
+                     GameTimer = 13;}
   }
   
   if(SotkaTimer > 0) SotkaTimer -= 1;
   else Sotka = 0;
+  
+  if(GameTimer > 0) GameTimer -= 1;
+  else if(GameTimer == 0) {
+    setTimeout(() => {msg.channel.send('Фухх, разбанили'); client.user.setPresence({ game: { name: Game }, status: 'dnd' });}, 12000);
+    GameTimer = -1;
+  }
   
   if(!msg.author.id in UserRegistred) {
     fs.readFile("userDb", function (err, contents) {
