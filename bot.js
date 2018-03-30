@@ -15,7 +15,7 @@ client.on('message', msg => {
     msg.reply('Хватит по китайски говорить!');
   }
   
-  if (msg.content.search(/морж/i) != -1 && msg.content.search(/лайкни/i)) {
+  if (msg.content.search(/морж/i) != -1 && msg.content.search(/лайкни/i) != -1) {
     msg.react('👍');
   }
 
