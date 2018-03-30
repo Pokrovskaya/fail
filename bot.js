@@ -32,7 +32,7 @@ client.on('message', msg => {
   }
   
   if (msg.content === 'ping') {
-    msg.reply('Хватит по китайски говорить!');
+    msg.reply('окей!');
   }
   
   if (msg.content.search(/морж/i) != -1 && msg.content.search(/лайкни/i) != -1) {
