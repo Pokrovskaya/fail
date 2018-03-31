@@ -20,7 +20,7 @@ client.on('message', msg => {
   let chance = Math.random()*40;
   chance = Math.floor(chance);
   if(chance == 0){
-    let jar = Math.random()*2;
+    let jar = Math.random()*4;
       jar = Math.floor(jar);
       if(jar == 0) { setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 300000);
                      Sotka = 1;
@@ -29,6 +29,12 @@ client.on('message', msg => {
       if(jar == 1) { setTimeout(() => {msg.channel.send("Блин, меня просто так на серваке забанили. За что?") ;}, 50000);
                      client.user.setPresence({ game: { name: 'Chrome' }, status: 'idle' });
                      GameTimer = 13;}
+    
+      if(jar == 2) { setTimeout(() => {msg.channel.send("Кто во что любит гамать?") ;}, 50000);
+                     }
+    
+      if(jar == 3) { setTimeout(() => {msg.channel.send("Эй, Вахтанг, го на пвп!") ;}, 50000);
+                     }
   }
   
   if(SotkaTimer > 0) SotkaTimer -= 1;
