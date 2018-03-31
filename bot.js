@@ -22,11 +22,11 @@ client.on('message', msg => {
   if(chance == 0){
     let jar = Math.random()*2;
       jar = Math.floor(jar);
-      if(jar == 0) { setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 5000);
+      if(jar == 0) { setTimeout(() => {msg.channel.send("Эй, народ, займете сотку до понедельника?") ;}, 300000);
                      Sotka = 1;
                      SotkaTimer = 5;}
     
-      if(jar == 1) { setTimeout(() => {msg.channel.send("Блин, меня просто так на серваке забанили. За что?") ;}, 5000);
+      if(jar == 1) { setTimeout(() => {msg.channel.send("Блин, меня просто так на серваке забанили. За что?") ;}, 50000);
                      client.user.setPresence({ game: { name: 'Chrome' }, status: 'idle' });
                      GameTimer = 13;}
   }
