@@ -6,7 +6,7 @@ var Shvillings = 900000;
 var Dobrota = 0;
 var Sotka = 0;
 var SotkaTimer = 0;
-var Game = 'Minecraft 5a0.3.0';
+var Game = 'Minecraft 6a0.3.0';
 var GameTimer = -1;
 var UserRegistred = [];
 
