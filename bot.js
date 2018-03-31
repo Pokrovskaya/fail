@@ -6,7 +6,7 @@ var Shvillings = 900000;
 var Dobrota = 0;
 var Sotka = 0;
 var SotkaTimer = 0;
-var Game = ' v6a0.3.0';
+var Game = ' v7a0.3.0';
 var Games = ['PUBG', 'Minecraft', 'CS:GO', 'Terraria', 'Clash Royale', 'Clash of clans', 'Hearthstone'];
 var GameTimer = -1;
 var UserRegistred = [];
@@ -14,7 +14,9 @@ var UserRegistred = [];
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  client.user.setPresence({ game: { name: Game }, status: 'dnd' });
+  let GreatJar = Math.floor(Math.random()*Games.length);
+  client.user.setPresence({ game: { name: Games[GreatJar] + Game }, status: 'dnd' });
+  
   setInterval(() => {
     let GreatJar = Math.floor(Math.random()*Games.length);
     client.user.setPresence({ game: { name: Games[GreatJar] + Game }});
